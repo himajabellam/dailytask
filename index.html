@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>DAILY TASK</h3>
+</body>
+<script>
+  //1.array function
+  const multiplyByTwo=(num)=>num*2;
+  console.log(`Number is 3 multiplied with 2 then output is:${3*2}`);
+
+  //even
+  const isEven = (number) => number % 2 === 0;
+  console.log(isEven(4));
+  console.log(isEven(7)); 
+
+  // Define the functions
+   const multiplyByTwos = (num) => num * 2;
+   const isEvens = (number) => number % 2 === 0;
+
+ // Test multiplyByTwo function with different arguments
+  console.log(multiplyByTwo(5));  
+  console.log(multiplyByTwo(10)); 
+  console.log(multiplyByTwo(-3)); 
+
+ // Test isEven function with different arguments
+  console.log(isEven(4));  
+  console.log(isEven(7));  
+  console.log(isEven(0));  
+  
+
+  //2.Global and Local scope
+   var globalVar=10;
+        function scope(){
+          var localVar=20;
+            console.log(globalVar);
+            console.log(localVar)
+        }
+        scope();
+        console.log(globalVar);
+
+  //3.closure
+  function outerFunction() {
+    let outerVar = 5;
+    function innerFunction() {
+        return outerVar;
+    }
+    return innerFunction;
+  }
+  let closure = outerFunction();
+  console.log(closure()); 
+
+
+
+ //4.pure function
+  function sum(a,b){ 
+    return a+b;
+   }
+  function multiply(x,y){
+    return x*y;
+  } 
+  
+   const result1=sum(3,3);
+   const result2=multiply(2,3)
+   console.log('result1',result1,'result2',result2)
+
+
+
+  //5.callstack
+  function functionA() {
+    functionB();
+  }
+
+  function functionB() {
+    functionC();
+  }
+
+  function functionC() {
+    console.log("Inside functionC");
+  }
+  functionA();
+
+
+
+
+</script>
+</html>
